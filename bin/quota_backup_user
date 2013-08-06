@@ -1,0 +1,6 @@
+#!/bin/bash
+# $Id: quota_backup_user,v 1.1 2007/08/17 15:14:22 wynandv Exp $
+
+source /usr/local/hetzner/bin/ftp_backup_conf
+
+echo "***$GBQUOTA***"

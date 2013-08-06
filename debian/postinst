@@ -1,0 +1,9 @@
+#!/bin/sh
+
+chmod 700 /usr/local/hetzner/bin/add_backup_user
+chmod 700 /usr/local/hetzner/bin/check_backup_user
+chmod 700 /usr/local/hetzner/bin/quota_backup_user
+chmod 700 /usr/local/hetzner/bin/resetpw_backup_user
+chmod 700 /usr/local/hetzner/bin/usage_backup_user
+chmod 700 /usr/local/hetzner/bin/ftp_backup.bc
+chmod 700 /usr/local/hetzner/bin/ftp_backup_conf

@@ -1,0 +1,16 @@
+#!/bin/bash
+# $Id: usage_backup_user,v 1.2 2007/09/12 06:52:05 wynandv Exp $
+
+source /usr/local/hetzner/bin/ftp_backup_conf
+
+if [ -n "$1" ]; then
+	USAGE=`du -s $MOUNTPOINT/$1 | cut -f1`
+	if [ $USAGE ]; then
+		GBUSAGE=$(echo "round($USAGE / 1024 / 1024)" | /usr/local/hetzner/bin/ftp_backup.bc);
+		echo "***$GBUSAGE***";
+	else 
+		echo "***0***";
+	fi
+else
+	echo "***0***"
+fi

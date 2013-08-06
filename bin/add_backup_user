@@ -1,0 +1,10 @@
+#!/bin/bash
+# $Id: add_backup_user,v 1.2 2007/11/02 09:17:15 wynandv Exp $
+
+source /usr/local/hetzner/bin/ftp_backup_conf
+
+if [ -n "$1" ]; then
+	/usr/sbin/useradd -m -d $MOUNTPOINT/$1 $1;
+	/usr/sbin/usermod -s /bin/bash -p `mkpasswd --hash=md5 $2` $1;
+	/usr/sbin/setquota -u $1 0 $QUOTA 0 0 $PARTITION;
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+# $Id: ftp_backup_conf,v 1.4 2007/11/02 09:17:15 wynandv Exp $
+
+PARTITION="/dev/mapper/vg-bak"  #NB this must change to the raid volume
+# BLKSIZE is useless, quota takes its arguments as if it were using 1k blocks
+BLKSIZE=`dumpe2fs -hf $PARTITION 2>/dev/null | grep 'Block size' | xargs echo | cut -d' ' -f3`
+GBQUOTA=50
+QUOTA=$( echo "int(1024 * 1024 * $GBQUOTA)" | /usr/local/hetzner/bin/ftp_backup.bc )
+# Change this to the mountpoint where the raid volume gets mounted
+MOUNTPOINT="/ftpbackup"
+

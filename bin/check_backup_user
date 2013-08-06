@@ -1,0 +1,7 @@
+#!/bin/bash
+# $Id: check_backup_user,v 1.1 2007/08/17 15:14:22 wynandv Exp $
+
+if [ -n "$1" ]; then 
+	! ( grep $1: /etc/passwd ) 
+fi
+

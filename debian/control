@@ -1,0 +1,15 @@
+Source: hetzner-ftpbackup
+Section: misc
+Priority: extra
+Maintainer: Christophe Faivre - Hetzner ZA <christophe.faivre@hetzner.co.za>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: hetzner-ftpbackup
+Architecture: all
+Depends: superserver ${shlibs:Depends}
+Conflicts: hetzner-ftpbackup
+Replaces: hetzner-ftpbackup
+Provides: hetzner-ftpbackup
+Description: Hetzner FTPBackup
+ Package containing scripts used by konsoleH for management of FTPBackup accounts (Setup, removal and password).

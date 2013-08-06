@@ -1,0 +1,6 @@
+#!/bin/bash
+# $Id: resetpw_backup_user,v 1.1 2007/08/17 15:14:22 wynandv Exp $
+
+if [ -n "$1" ]; then
+	/usr/sbin/usermod -p `mkpasswd --hash=md5 $2` $1;
+fi

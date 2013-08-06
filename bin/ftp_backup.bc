@@ -1,0 +1,19 @@
+#!/usr/bin/bc -l
+# $Id: ftp_backup.bc,v 1.1 2007/08/17 15:14:22 wynandv Exp $
+
+scale=100;
+
+# Round to next integer nearest 0:  -1.99 -> 1, 0.99 -> 0
+define int(x)   { auto os;os=scale;scale=0;x/=1;scale=os;return(x) } 
+
+# Round down to integer below x
+define floor(x) { auto xx;xx=int(x);if(xx>x)xx-=1;return(xx) }
+
+# Round up to integer above x
+define ceil(x) { return(-floor(-x)) }
+
+# Fractional part of x:  12.345 -> 0.345
+define frac(x) { return(x-floor(x)) }
+
+define round(x) { if(frac(x) < 0.5) { return floor(x) } else { return ceil(x)}}
+
