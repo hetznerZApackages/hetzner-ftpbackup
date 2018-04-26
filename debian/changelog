@@ -1,3 +1,9 @@
+hetzner-ftpbackup (1.0.0+hetz4) jessie-hetz; urgency=low
+
+  * Released 1.0.0+hetz4~exp3 as 1.0.0+hetz4
+
+ -- Geoff Robertson <gr@hetzner.co.za>  Thu, 26 Apr 2018 07:32:49 +0200
+
 hetzner-ftpbackup (1.0.0+hetz4~exp3) jessie-hetz-experimental; urgency=low
 
   * Correct mistake in control file
