@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: hetzner-ftpbackup
 Architecture: all
-Depends: superserver ${shlibs:Depends}
+Depends: superserver, ${shlibs:Depends}
 Conflicts: hetzner-ftpbackup
 Replaces: hetzner-ftpbackup
 Provides: hetzner-ftpbackup
