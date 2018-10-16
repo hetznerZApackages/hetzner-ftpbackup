@@ -1,3 +1,9 @@
+hetzner-ftpbackup (1.0.0+hetz5) jessie-hetz; urgency=low
+
+  * Released 1.0.0+hetz5~exp1 as 1.0.0+hetz5
+
+ -- Shaun Bugler - Hetzner <sb@hetzner.co.za>  Tue, 16 Oct 2018 14:19:15 +0200
+
 hetzner-ftpbackup (1.0.0+hetz5~exp1) jessie-hetz-experimental; urgency=low
 
   * Pull in ftp_backup_conf from puppet, yes it looks weird but it in prod 
